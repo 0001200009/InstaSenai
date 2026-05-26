@@ -7,7 +7,7 @@ zip \
 unzip \
 libpq-dev \
 libzip-dev \
-&amp;&amp; docker-php-ext-install pdo pdo_pgsql zip
+&& docker-php-ext-install pdo pdo_pgsql zip
 # Instala dependências necessárias para Projeto e PostgreSQL
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copia o Composer para dentro do container
